@@ -1,5 +1,3 @@
-""" Flask web application """
-
 #!/usr/bin/python3
 """ Flask web application """
 from flask import Flask
@@ -11,6 +9,6 @@ def hello_world():
     """ Function that returns hello """
     return "<p>Hello HBNB!</p>"
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
