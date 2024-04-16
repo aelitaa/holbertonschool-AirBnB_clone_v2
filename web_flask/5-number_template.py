@@ -5,6 +5,7 @@
 
 from flask import Flask
 from markupsafe import escape
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -42,11 +43,10 @@ def numer_n(n):
     return f"{n} is a number"
 
 
-@app.route('/number_template/<n>', strict_slashes=False)
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def numer_template(n):
-    if isinstance(n, int):
-        """ Function that displays n is a number only if n is an integer """
-        return render_template('5-number.html')
+    """ Function that displays n is a number only if n is an integer """
+    return render_template('5-number.html', number=n)
 
 
 if __name__ == '__main__':
