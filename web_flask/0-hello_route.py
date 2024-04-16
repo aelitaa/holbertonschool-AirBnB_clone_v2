@@ -1,3 +1,5 @@
+""" Flask web application """
+
 #!/usr/bin/python3
 """ Flask web application """
 from flask import Flask
