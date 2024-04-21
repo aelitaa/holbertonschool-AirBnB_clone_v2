@@ -85,7 +85,7 @@ class DBStorage:
 
     def close(self):
         """
-        Calls close() method on 
+        Calls close() method on
         private session attribute
         self.__session
         """
