@@ -27,6 +27,5 @@ class State(BaseModel, Base):
             from models.city import City
 
             all_cities = storage.all(City)
-            cities_of_state = [v if v.state_id == self.id else "" for k, v
-                               in all_cities.items()]
+            cities_of_state = [city for city in all_cities.values() if city.state_id == self.id]
             return cities_of_state
